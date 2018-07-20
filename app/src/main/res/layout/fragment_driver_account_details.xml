@@ -1,14 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DriverAccountDetails">
+    android:background="@color/white"
+    android:theme="@style/ReachAppTheme"
+    tools:context=".Fragments.DriverAccountDetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_below="@+id/user_image"
+        android:layout_marginRight="0dp"
+        android:theme="@style/card_theme_0">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@drawable/card_div">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/name_email_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_div"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="2dp">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="John Brown" />
+
+                <TextView
+                    android:id="@+id/user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_name"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="johnbrown@email.com" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/completed_rides_container"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/name_email_container"
+            android:background="@drawable/card_div"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/text_completed_rides"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:text="Completed rides: " />
+
+            <TextView
+                android:id="@+id/ride_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/text_completed_rides"
+                android:text="50" />
+
+            <ImageView
+                android:id="@+id/ic_rating_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="false"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_star_black_24dp"
+                android:tint="#f1bd00" />
+
+            <TextView
+                android:id="@+id/driver_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="33dp"
+                android:text="5"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/available_container"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/completed_rides_container"
+            android:background="@drawable/card_div"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/text_available_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="false"
+                android:layout_centerVertical="true"
+                android:text="Available" />
+
+            <Switch
+                android:id="@+id/switch_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="false"
+                android:layout_centerVertical="true"
+                android:enabled="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/account_status_container"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/available_container"
+            android:background="@drawable/card_div"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/text_account_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="false"
+                android:layout_centerVertical="true"
+                android:text="Account Status: " />
+
+            <TextView
+                android:id="@+id/account_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="Approved"
+                android:textColor="#00ff00" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
