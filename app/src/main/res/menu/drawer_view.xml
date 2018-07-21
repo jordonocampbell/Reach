@@ -8,11 +8,6 @@
             android:title="My Account"
             android:icon="@drawable/ic_person_outline_black_24dp"/>
         <item
-            android:id="@+id/driver_ride_history"
-            android:title="Ride History"
-            android:icon="@drawable/ic_restore_black_24dp"
-            />
-        <item
             android:id="@+id/driver_ride_schedule"
             android:layout_height="wrap_content"
             android:title="Ride Schedule"

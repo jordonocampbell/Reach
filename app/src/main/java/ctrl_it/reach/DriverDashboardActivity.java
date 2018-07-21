@@ -14,6 +14,7 @@ import android.text.Layout;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import ctrl_it.reach.Fragments.DriverAccountDetailsFragment;
 import ctrl_it.reach.Fragments.DriverScheduleFragment;
 
 
@@ -65,8 +66,9 @@ public class DriverDashboardActivity extends AppCompatActivity{
         switch(menuItem.getItemId()) {
             case R.id.driver_ride_schedule:
                 fragmentClass = DriverScheduleFragment.class;
-                Toast.makeText(this, "fragment 1",
-                        Toast.LENGTH_LONG).show();
+                break;
+            case R.id.driver_account:
+                fragmentClass = DriverAccountDetailsFragment.class;
                 break;
             default:
                 fragmentClass = DriverScheduleFragment.class;
