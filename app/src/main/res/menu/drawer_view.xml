@@ -2,7 +2,8 @@
 <menu xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+
+    <group android:id="@+id/first_section" android:checkableBehavior="single">
         <item
             android:id="@+id/driver_account"
             android:title="My Account"
@@ -11,20 +12,20 @@
             android:id="@+id/driver_ride_schedule"
             android:layout_height="wrap_content"
             android:title="Ride Schedule"
-            android:icon="@drawable/ic_event_note_black_24dp"
-            />
-        <item
-            android:id="@+id/driver_sign_out"
-            android:title="Sign Out"
-            android:icon="@drawable/ic_touch_app_black_24dp"
-            />
+            android:icon="@drawable/ic_event_note_black_24dp" />
+    </group>
+    <group android:id="@+id/second_section" android:checkableBehavior="single">
         <item
             android:id="@+id/driver_available"
             android:title="Available"
-            android:icon="@drawable/ic_flag_black_24dp"
-            />
-
-        <item android:id="@+id/driver_emergency"
+            android:actionLayout="@layout/available_nav_switch"
+            android:icon="@drawable/ic_flag_black_24dp"/>
+        <item
+            android:id="@+id/driver_sign_out"
+            android:title="Sign Out"
+            android:icon="@drawable/ic_touch_app_black_24dp"/>
+        <item
+            android:id="@+id/driver_emergency"
             android:title="Emergency"
             android:icon="@drawable/ic_warning_black_24dp"/>
     </group>
